@@ -1,0 +1,33 @@
+@import "styles/colors.scss";
+
+.about {
+  .about-us {
+    height: 1188px;
+    background-image: url("/assets/images/about-bg.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    margin-top: -104px;
+    margin-bottom: 104px;
+
+    .block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 165px;
+      flex-direction: column;
+      gap: 24px;
+
+      h1 {
+        text-transform: uppercase;
+      }
+
+      p {
+        text-align: center;
+        font-size: 14px;
+        line-height: 30px;
+        font-family: "Space Mono", sans-serif;
+      }
+    }
+  }
+}
