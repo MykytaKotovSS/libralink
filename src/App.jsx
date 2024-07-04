@@ -5,7 +5,7 @@ import Header from "./components/Header";
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="container">
         <Header />
         <Routes>
           <Route path="/about-us" element={<p>About us</p>} />
