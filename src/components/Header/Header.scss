@@ -1,3 +1,5 @@
+@import "styles/colors.scss";
+
 .header {
   .menu {
     display: flex;
@@ -5,8 +7,7 @@
     align-items: center;
   }
 
-  .nav,
-  .contact {
+  .nav {
     display: flex;
     gap: 24px;
     list-style: none;
@@ -20,6 +21,27 @@
       font-size: 24px;
       line-height: 40px;
       margin: 0;
+      text-transform: uppercase;
+    }
+
+    .logo {
+      display: flex;
+      padding: 16px 0;
+      font-size: 14px;
+      line-height: 24px;
+      align-items: center;
+    }
+  }
+
+  .contact {
+    a {
+      display: flex;
+      gap: 4px;
+      padding: 16px 0;
+      font-size: 14px;
+      line-height: 24px;
+      align-items: center;
+      color: $blue-light;
       text-transform: uppercase;
     }
   }
