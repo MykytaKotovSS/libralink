@@ -6,31 +6,18 @@ const Header = () => {
   return (
     <header className="header">
       <div className="menu">
-        <ul className="nav-list">
-          <li>
-            <Link to="/">Libralink</Link>
-          </li>
-          <li>
-            <Link to="/about-us">
-              <h3>About Us</h3>
-            </Link>
-          </li>
-          <li>
-            <Link to="/services">
-              <h3>Services</h3>
-            </Link>
-          </li>
-          <li>
-            <Link to="/sustainability">
-              <h3>Sustainability</h3>
-            </Link>
-          </li>
-        </ul>
-        <ul className="contact">
-          <li>
-            <Link to="/contact-us">Contact us</Link>
-          </li>
-        </ul>
+        <nav className="nav">
+          <Link to="/">Libralink</Link>
+
+          <Link to="/about-us">About Us</Link>
+
+          <Link to="/services">Services</Link>
+
+          <Link to="/sustainability">Sustainability</Link>
+        </nav>
+        <div className="contact">
+          <Link to="/contact-us">Contact us</Link>
+        </div>
       </div>
     </header>
   );
