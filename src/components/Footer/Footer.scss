@@ -1,19 +1,15 @@
 @import "styles/colors.scss";
 
-.header {
+.footer {
   display: flex;
   justify-content: center;
-
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  border-top: 1px solid white;
 
   .nav {
     display: flex;
     gap: 24px;
     margin: 0;
+    justify-content: space-between;
 
     a {
       padding: 16px 8px;
@@ -28,22 +24,8 @@
     .logo {
       display: flex;
       padding: 16px 0;
-      font-size: 14px;
-      line-height: 24px;
+      font-weight: 700;
       align-items: center;
-    }
-  }
-
-  .contact {
-    a {
-      display: flex;
-      gap: 4px;
-      padding: 16px 0;
-      font-size: 14px;
-      line-height: 24px;
-      align-items: center;
-      color: $blue-light;
-      text-transform: uppercase;
     }
   }
 }

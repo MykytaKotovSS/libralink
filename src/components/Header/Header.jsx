@@ -7,7 +7,7 @@ import { ReactComponent as Chats } from "assets/icons/Chats.svg";
 const Header = () => {
   return (
     <header className="header">
-      <div className="menu">
+      <div className="menu container">
         <nav className="nav">
           <Link to="/" className="logo">
             <Logo />
