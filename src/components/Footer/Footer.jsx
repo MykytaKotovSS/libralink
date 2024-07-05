@@ -1,21 +1,29 @@
 import "./Footer.scss";
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as Logo } from "assets/icons/Command.svg";
 import { ReactComponent as Copyright } from "assets/icons/Copyright.svg";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <footer className="footer">
       <nav className="nav container">
-        <Link to="/" className="logo">
+        <div onClick={() => handleLinkClick("/")} className="logo">
           <Logo />
           Libralink
-        </Link>
-        <Link to="/about-us">About Us</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/sustainability">Sustainability</Link>
-        <Link to="/contact-us">Contact us</Link>
+        </div>
+        <div onClick={() => handleLinkClick("/about-us")}>About Us</div>
+        <div onClick={() => handleLinkClick("/services")}>Services</div>
+        <div onClick={() => handleLinkClick("/sustainability")}>
+          Sustainability
+        </div>
+        <div onClick={() => handleLinkClick("/contact-us")}>Contact us</div>
       </nav>
       <nav className="links container">
         <span>Privacy Policy | Terms & Conditions</span>
