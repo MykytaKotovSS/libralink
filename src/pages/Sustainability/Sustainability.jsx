@@ -1,10 +1,15 @@
 import "./Sustainability.scss";
 import React from "react";
+import image from "assets/images/sustainability-img.svg";
 
 const Sustainability = () => {
   return (
-    <section className="sustainability">
-      <article className="group container">
+    <section className="sustainability container">
+      <div className="images">
+        <img src={image} alt="sustainability" />
+        <img src={image} className="second" alt="sustainability" />
+      </div>
+      <article className="group">
         <div className="card">
           <h2>Our Commitment to Sustainability</h2>
           <p>

@@ -1,6 +1,18 @@
 @import "styles/colors.scss";
 
 .sustainability {
+  display: flex;
+  .images {
+    display: flex;
+    flex-direction: column;
+    margin-left: -160px;
+    img {
+      &.second {
+        margin-top: -173px;
+      }
+    }
+  }
+
   .group {
     display: flex;
     flex-direction: column;
