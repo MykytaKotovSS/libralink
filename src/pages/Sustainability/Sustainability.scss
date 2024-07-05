@@ -1,0 +1,22 @@
+@import "styles/colors.scss";
+
+.sustainability {
+  .group {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    align-items: end;
+    padding: 48px 0;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 647px;
+
+      h2 {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
