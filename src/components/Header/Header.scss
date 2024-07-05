@@ -24,6 +24,13 @@
       line-height: 40px;
       margin: 0;
       text-transform: uppercase;
+
+      &.active {
+        color: transparent;
+        background: linear-gradient(90deg, $blue-light 0%, $gradient-1 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
     }
 
     .logo {
