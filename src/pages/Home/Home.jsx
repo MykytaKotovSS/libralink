@@ -16,6 +16,32 @@ const Home = () => {
           </p>
         </div>
       </article>
+      <article>
+        <div className="second container">
+          <h1>Who We Are</h1>
+          <div className="block">
+            <p>
+              Our team combines expertise in technology and a deep commitment to
+              environmental stewardship, creating datacenter solutions that not
+              only meet but exceed industry standards.
+            </p>
+            <p>
+              Our team combines expertise in technology and a deep commitment to
+              environmental stewardship, creating datacenter solutions that not
+              only meet but exceed industry standards.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div className="second third container">
+          <h1>Our Expertise</h1>
+          <p>
+            We offer a comprehensive range of services tailored to meet the
+            demands of modern enterprises:
+          </p>
+        </div>
+      </article>
     </section>
   );
 };

@@ -22,4 +22,26 @@
       }
     }
   }
+
+  .second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 120px;
+
+    h1 {
+      text-transform: uppercase;
+    }
+
+    .block {
+      display: flex;
+      gap: 24px;
+    }
+
+    &.third {
+      margin-bottom: 80px;
+    }
+  }
 }
