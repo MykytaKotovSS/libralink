@@ -92,6 +92,20 @@ const Home = () => {
           </div>
         </div>
       </article>
+      <article className="bottom">
+        <div className="five container">
+          <h1>Sustainability at Our Core</h1>
+          <h3>Contact Us Today to Learn More About Our Green Solutions</h3>
+          <p>
+            At LibraLink, sustainability is not an afterthought – it's integral
+            to our mission. Our datacenters are powered by renewable energy
+            sources, minimizing our carbon footprint while maximizing efficiency
+            and performance. By integrating green technologies and practices, we
+            ensure that our operations are environmentally responsible and
+            contribute positively to global sustainability efforts.
+          </p>
+        </div>
+      </article>
     </section>
   );
 };
