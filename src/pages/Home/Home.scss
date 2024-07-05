@@ -44,4 +44,26 @@
       margin-bottom: 80px;
     }
   }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+
+  .card {
+    display: flex;
+    gap: 24px;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 96px);
+      gap: 8px;
+
+      h3 {
+        text-transform: uppercase;
+      }
+    }
+  }
 }
