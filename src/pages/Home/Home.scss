@@ -1,0 +1,25 @@
+@import "styles/colors.scss";
+
+.home {
+  .main {
+    height: 1110px;
+    background-image: url("/assets/images/home-bg.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    margin-top: -104px;
+
+    .first {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 165px;
+      flex-direction: column;
+      gap: 24px;
+
+      h1 {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

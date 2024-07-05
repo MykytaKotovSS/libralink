@@ -5,6 +5,7 @@ import Footer from "components/Footer";
 import About from "pages/About";
 import Services from "pages/Services";
 import Sustainability from "pages/Sustainability";
+import Home from "pages/Home";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/sustainability" element={<Sustainability />} />
         <Route path="/contact-us" element={<p>Contact us</p>} />
-        <Route path="/" element={<p>Home</p>} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
     </Router>
