@@ -30,6 +30,15 @@ const ContactUs = () => {
           </p>
         </div>
       </article>
+      <article>
+        <div className="form container">
+          <h2>Send Us a Message</h2>
+          <p>
+            Please fill out the form below and we will get back to you as soon
+            as possible.
+          </p>
+        </div>
+      </article>
     </section>
   );
 };
