@@ -5,6 +5,7 @@
   .images {
     display: flex;
     flex-direction: column;
+    width: 450px;
     margin-left: -160px;
     img {
       &.second {

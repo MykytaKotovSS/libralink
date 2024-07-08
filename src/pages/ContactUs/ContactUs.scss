@@ -1,0 +1,31 @@
+@import "styles/colors.scss";
+
+.contact {
+  .main {
+    height: 1000px;
+    background-image: url("/assets/images/contact-us-bg.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 40px;
+    margin-top: -104px;
+    // margin-left: 265px;
+
+    .first {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 165px;
+      margin-left: -115px;
+      flex-direction: column;
+      gap: 24px;
+
+      h1 {
+        text-transform: uppercase;
+      }
+
+      p {
+        width: 582px;
+      }
+    }
+  }
+}
