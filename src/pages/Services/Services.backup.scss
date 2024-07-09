@@ -1,0 +1,36 @@
+@import "styles/colors.scss";
+
+.services {
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 48px;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 48px 0;
+
+    .card {
+      border: 1px solid $blue-light;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      padding: 48px;
+      gap: 24px;
+
+      &.blue {
+        background: $blue-light;
+        color: black;
+      }
+
+      h2 {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

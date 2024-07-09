@@ -1,26 +1,13 @@
 import "./Services.scss";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { ReactComponent as Desktop } from "assets/icons/Desktop.svg";
 import { ReactComponent as CheckSquare } from "assets/icons/CheckSquareOffset.svg";
 import { ReactComponent as AppWindow } from "assets/icons/AppWindow.svg";
 import { ReactComponent as Browsers } from "assets/icons/Browsers.svg";
 
 const Services = () => {
-  const [animate, setAnimate] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    if (section) {
-      setAnimate(true);
-    }
-  }, []);
-
   return (
-    <section
-      className={`services ${animate ? "animate" : ""}`}
-      ref={sectionRef}
-    >
+    <section className="services">
       <h1>our Services</h1>
       <article className="group container">
         <div className="card">
