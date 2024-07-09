@@ -1,7 +1,25 @@
 import "./ContactUs.scss";
-import React from "react";
+import React, { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
+import Button from "components/Button";
+import Input from "components/Input/Input";
 
 const ContactUs = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("SUCCESS", data);
+    setSubmitted(true);
+    reset();
+  };
+
   return (
     <section className="contact">
       <article className="main">
@@ -30,13 +48,90 @@ const ContactUs = () => {
           </p>
         </div>
       </article>
-      <article>
-        <div className="form container">
+      <article className="form-container">
+        <div className="form-wrapper container">
           <h2>Send Us a Message</h2>
           <p>
             Please fill out the form below and we will get back to you as soon
             as possible.
           </p>
+          <form onSubmit={handleSubmit(onSubmit)} className="form">
+            <div>
+              <Controller
+                name="name"
+                control={control}
+                defaultValue=""
+                rules={{ required: "Name is required" }}
+                render={({ field }) => (
+                  <Input
+                    label="Name"
+                    placeholder="Name"
+                    {...field}
+                    error={errors.name}
+                  />
+                )}
+              />
+            </div>
+
+            <div>
+              <Controller
+                name="email"
+                control={control}
+                defaultValue=""
+                rules={{
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                    message: "Invalid email address",
+                  },
+                }}
+                render={({ field }) => (
+                  <Input
+                    label="Email"
+                    placeholder="Email"
+                    {...field}
+                    error={errors.email}
+                  />
+                )}
+              />
+            </div>
+
+            <div>
+              <Controller
+                name="subject"
+                control={control}
+                defaultValue=""
+                rules={{ required: "Subject is required" }}
+                render={({ field }) => (
+                  <Input
+                    label="Subject"
+                    placeholder="Subject"
+                    {...field}
+                    error={errors.subject}
+                  />
+                )}
+              />
+            </div>
+
+            {/* <div>
+              <Controller
+                name="description"
+                control={control}
+                defaultValue=""
+                rules={{ required: "Description is required" }}
+                render={({ field }) => (
+                  <TextArea
+                    label="Describe your problem *"
+                    placeholder="Describe your problem"
+                    {...field}
+                    error={errors.description}
+                  />
+                )}
+              />
+            </div> */}
+            <Button>Send</Button>
+            {submitted && <h3>Your form has been successfully submitted!</h3>}
+          </form>
         </div>
       </article>
     </section>

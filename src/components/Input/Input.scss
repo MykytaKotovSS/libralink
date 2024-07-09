@@ -1,0 +1,46 @@
+@import "styles/colors.scss";
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 12px;
+  color: $grey-light;
+}
+
+.input {
+  padding: 11px 16px;
+  font-size: 14px;
+  line-height: 30px;
+  color: $grey-light;
+  background: $purple-light;
+  border: 1px solid $grey-light;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.input::placeholder {
+  color: $grey-light;
+}
+
+.input:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.error-container {
+  border-color: red;
+}
+
+.error-input {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
