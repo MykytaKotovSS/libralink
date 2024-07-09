@@ -4,6 +4,7 @@ import { useForm, Controller } from "react-hook-form";
 import Button from "components/Button";
 import Input from "components/Input/Input";
 import TextArea from "components/TextArea";
+import emailjs from "emailjs-com";
 import { ReactComponent as Location } from "assets/images/contact-us-location.svg";
 
 const ContactUs = () => {
@@ -17,8 +18,18 @@ const ContactUs = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("SUCCESS", data);
-    setSubmitted(true);
+    emailjs
+      .send("service_ayib40t", "template_511yfng", data, "9-maX-QhpOfHSK9tP")
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSubmitted(true);
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+
     reset();
   };
 
