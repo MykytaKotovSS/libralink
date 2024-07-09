@@ -4,6 +4,7 @@ import { useForm, Controller } from "react-hook-form";
 import Button from "components/Button";
 import Input from "components/Input/Input";
 import TextArea from "components/TextArea";
+import { ReactComponent as Location } from "assets/images/contact-us-location.svg";
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -133,6 +134,20 @@ const ContactUs = () => {
             <Button>Send</Button>
             {submitted && <h3>Your form has been successfully submitted!</h3>}
           </form>
+        </div>
+      </article>
+
+      <article>
+        <div className="location container">
+          <h2>Our Locations</h2>
+          <p>
+            Visit our state-of-the-art facilities in Luxembourg and Belgium. Our
+            strategic locations allow us to serve clients across Europe
+            efficiently and effectively. Use the map below to find our offices
+            and datacenters.
+          </p>
+
+          <Location />
         </div>
       </article>
     </section>
