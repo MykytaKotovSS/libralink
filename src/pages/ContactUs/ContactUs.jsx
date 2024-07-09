@@ -6,6 +6,9 @@ import Input from "components/Input/Input";
 import TextArea from "components/TextArea";
 import emailjs from "emailjs-com";
 import { ReactComponent as Location } from "assets/images/contact-us-location.svg";
+import { ReactComponent as Envelope } from "assets/icons/Envelope.svg";
+import { ReactComponent as MapPinLine } from "assets/icons/MapPinLine.svg";
+import { ReactComponent as DeviceMobile } from "assets/icons/DeviceMobile.svg";
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -46,15 +49,21 @@ const ContactUs = () => {
             meeting.
           </p>
           <p>
-            Email <br />
+            <p className="p-row">
+              <Envelope /> Email <br />
+            </p>
             <span>info@libralink.com</span>
           </p>
           <p>
-            Phone <br />
+            <p className="p-row">
+              <DeviceMobile /> Phone <br />
+            </p>
             <span>+352 123 456 789</span>
           </p>
           <p>
-            Address <br />
+            <p className="p-row">
+              <MapPinLine /> Address <br />
+            </p>
             <span>LibraLink HQ, 12 Green Street,</span>
             <br />
             <span>Luxembourg City, Luxembourg</span>
