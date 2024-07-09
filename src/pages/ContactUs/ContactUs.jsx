@@ -22,10 +22,9 @@ const ContactUs = () => {
 
   const onSubmit = (data) => {
     emailjs
-      .send("service_ayib40t", "template_511yfng", data, "9-maX-QhpOfHSK9tP")
+      .send("service_hyygfr3", "template_s8nk3xu", data, "uCovDWgISoVp5NDH1")
       .then(
         (response) => {
-          console.log("SUCCESS!", response.status, response.text);
           setSubmitted(true);
         },
         (error) => {
@@ -54,7 +53,7 @@ const ContactUs = () => {
             </p>
             <span>info@libralink.com</span>
           </p>
-          <p>
+          <p className="hide">
             <p className="p-row">
               <DeviceMobile /> Phone <br />
             </p>
@@ -64,9 +63,9 @@ const ContactUs = () => {
             <p className="p-row">
               <MapPinLine /> Address <br />
             </p>
-            <span>LibraLink HQ, 12 Green Street,</span>
+            <span>45, rue des Scillas</span>
             <br />
-            <span>Luxembourg City, Luxembourg</span>
+            <span>L-2529 Howald, Luxembourg </span>
           </p>
         </div>
       </article>
@@ -157,7 +156,7 @@ const ContactUs = () => {
         </div>
       </article>
 
-      <article>
+      <article className="hide">
         <div className="location container">
           <h2>Our Locations</h2>
           <p>

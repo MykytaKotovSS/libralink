@@ -20,7 +20,9 @@ const Home = () => {
             Harnessing Sustainable Power for Unmatched Performance and
             Innovation
           </p>
-          <Button>Discover Our Solutions</Button>
+          <Link to="/services">
+            <Button>Discover Our Services</Button>
+          </Link>
         </div>
       </article>
       <article>

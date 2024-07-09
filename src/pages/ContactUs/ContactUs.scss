@@ -24,7 +24,7 @@
         width: 582px;
       }
 
-      .p-row{
+      .p-row {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -82,4 +82,8 @@
       text-transform: uppercase;
     }
   }
+}
+
+.hide {
+  display: none;
 }
