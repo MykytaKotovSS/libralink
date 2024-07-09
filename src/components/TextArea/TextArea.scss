@@ -1,6 +1,6 @@
 @import "styles/colors.scss";
 
-.input-container {
+.textAreaContainer {
   display: flex;
   flex-direction: column;
 }
@@ -12,7 +12,7 @@
   color: $grey-light;
 }
 
-.input {
+.textArea {
   padding: 16px;
   font-size: 14px;
   line-height: 30px;
@@ -21,26 +21,22 @@
   border: 1px solid $grey-light;
   border-radius: 8px;
   transition: border-color 0.3s;
+  min-height: 168px;
 }
 
-.input::placeholder {
+.textArea::placeholder {
   color: $grey-light;
 }
 
-.input:focus {
-  border-color: #0070f3;
-  outline: none;
-}
-
-.error-container {
+.errorContainer {
   border-color: red;
 }
 
-.error-input {
+.errorTextArea {
   border-color: red;
 }
 
-.error-message {
+.errorMessage {
   color: red;
   font-size: 12px;
 }

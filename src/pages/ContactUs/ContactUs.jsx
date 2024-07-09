@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import Button from "components/Button";
 import Input from "components/Input/Input";
+import TextArea from "components/TextArea";
 
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -113,22 +114,22 @@ const ContactUs = () => {
               />
             </div>
 
-            {/* <div>
+            <div>
               <Controller
-                name="description"
+                name="message"
                 control={control}
                 defaultValue=""
-                rules={{ required: "Description is required" }}
+                rules={{ required: "Message is required" }}
                 render={({ field }) => (
                   <TextArea
-                    label="Describe your problem *"
-                    placeholder="Describe your problem"
+                    label="Message"
+                    placeholder="Message"
                     {...field}
-                    error={errors.description}
+                    error={errors.message}
                   />
                 )}
               />
-            </div> */}
+            </div>
             <Button>Send</Button>
             {submitted && <h3>Your form has been successfully submitted!</h3>}
           </form>
