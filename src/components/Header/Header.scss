@@ -5,53 +5,76 @@
   justify-content: center;
   padding: 16px 0;
 
+  @media (max-width: 768px) {
+    padding: 24px 0 16px 0;
+  }
+
   .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .nav {
-    display: flex;
-    gap: 24px;
-    margin: 0;
-
-    a {
-      padding: 16px 8px;
-      color: white;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 40px;
+    .nav {
+      display: flex;
+      gap: 24px;
       margin: 0;
-      text-transform: uppercase;
 
-      &.active {
-        color: transparent;
-        background: linear-gradient(90deg, $blue-light 0%, $gradient-1 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
+      .nav-desktop {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      a {
+        padding: 16px 8px;
+        color: white;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 40px;
+        margin: 0;
+        text-transform: uppercase;
+
+        &.active {
+          color: transparent;
+          background: linear-gradient(90deg, $blue-light 0%, $gradient-1 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+
+      .logo {
+        display: flex;
+        padding: 16px 0;
+        font-size: 14px;
+        line-height: 24px;
+        align-items: center;
       }
     }
 
-    .logo {
-      display: flex;
-      padding: 16px 0;
-      font-size: 14px;
-      line-height: 24px;
-      align-items: center;
-    }
-  }
+    .contact {
+      @media (max-width: 768px) {
+        display: none;
+      }
 
-  .contact {
-    a {
-      display: flex;
-      gap: 4px;
-      padding: 16px 0;
-      font-size: 14px;
-      line-height: 24px;
-      align-items: center;
-      color: $blue-light;
-      text-transform: uppercase;
+      a {
+        display: flex;
+        gap: 4px;
+        padding: 16px 0;
+        font-size: 14px;
+        line-height: 24px;
+        align-items: center;
+        color: $blue-light;
+        text-transform: uppercase;
+      }
+    }
+
+    .contact-mobile {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
     }
   }
 }

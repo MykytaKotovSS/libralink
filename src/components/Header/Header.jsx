@@ -3,6 +3,8 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ReactComponent as Logo } from "assets/icons/Command.svg";
 import { ReactComponent as Chats } from "assets/icons/Chats.svg";
+import { ReactComponent as ChatsMobile } from "assets/icons/ChatsMobile.svg";
+import { ReactComponent as List } from "assets/icons/List.svg";
 
 const Header = () => {
   const location = useLocation();
@@ -16,21 +18,27 @@ const Header = () => {
           </Link>
           <Link
             to="/about-us"
-            className={location.pathname === "/about-us" ? "active" : ""}
+            className={`nav-desktop ${
+              location.pathname === "/about-us" ? "active" : ""
+            }`}
           >
             About Us
           </Link>
 
           <Link
             to="/services"
-            className={location.pathname === "/services" ? "active" : ""}
+            className={`nav-desktop ${
+              location.pathname === "/services" ? "active" : ""
+            }`}
           >
             Services
           </Link>
 
           <Link
             to="/sustainability"
-            className={location.pathname === "/sustainability" ? "active" : ""}
+            className={`nav-desktop ${
+              location.pathname === "/sustainability" ? "active" : ""
+            }`}
           >
             Sustainability
           </Link>
@@ -40,6 +48,12 @@ const Header = () => {
             <Chats />
             Contact us
           </Link>
+        </div>
+        <div className="contact-mobile">
+          <Link to="/contact-us">
+            <ChatsMobile />
+          </Link>
+          <List />
         </div>
       </div>
     </header>
