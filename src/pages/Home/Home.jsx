@@ -97,7 +97,7 @@ const Home = () => {
           </div>
         </div>
       </article>
-      <article className="bottom" style={{ display: "none" }}>
+      <article className="bottom">
         <div className="five container">
           <h1>Sustainability at Our Core</h1>
           <h3>Contact Us Today to Learn More About Our Green Solutions</h3>

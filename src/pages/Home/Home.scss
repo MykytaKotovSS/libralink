@@ -118,11 +118,21 @@
     background-position-y: center;
     margin-top: -104px;
 
+    @media (max-width: 768px) {
+      margin-top: 0;
+      height: auto;
+      background-size: cover;
+    }
+
     .five {
       padding-top: 235px;
       display: flex;
       gap: 24px;
       flex-direction: column;
+
+      @media (max-width: 768px) {
+        padding: 0;
+      }
 
       h1 {
         text-transform: uppercase;
