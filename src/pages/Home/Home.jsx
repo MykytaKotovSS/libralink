@@ -45,7 +45,7 @@ const Home = () => {
       <article>
         <div className="second third container">
           <h1>Our Expertise</h1>
-          <p>
+          <p className="mobile-centered">
             We offer a comprehensive range of services tailored to meet the
             demands of modern enterprises:
           </p>
@@ -97,7 +97,7 @@ const Home = () => {
           </div>
         </div>
       </article>
-      <article className="bottom">
+      <article className="bottom" style={{ display: "none" }}>
         <div className="five container">
           <h1>Sustainability at Our Core</h1>
           <h3>Contact Us Today to Learn More About Our Green Solutions</h3>

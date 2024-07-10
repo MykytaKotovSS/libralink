@@ -1,6 +1,11 @@
 @import "styles/colors.scss";
 
 .home {
+  @media (max-width: 768px) {
+    article {
+      padding: 24px 16px;
+    }
+  }
   .main {
     height: 1110px;
     background-image: url("/assets/images/home-bg.svg");
@@ -9,6 +14,13 @@
     background-position-y: bottom;
     margin-top: -104px;
 
+    @media (max-width: 768px) {
+      background-size: contain;
+      padding: 16px;
+      margin-top: 0;
+      height: 700px;
+    }
+
     .first {
       display: flex;
       justify-content: center;
@@ -16,6 +28,10 @@
       padding-top: 165px;
       flex-direction: column;
       gap: 24px;
+
+      @media (max-width: 768px) {
+        padding: 0;
+      }
 
       h1 {
         text-transform: uppercase;
@@ -31,6 +47,11 @@
     gap: 24px;
     margin-bottom: 120px;
 
+    @media (max-width: 768px) {
+      padding: 0;
+      margin-bottom: 0;
+    }
+
     h1 {
       text-transform: uppercase;
     }
@@ -38,10 +59,18 @@
     .block {
       display: flex;
       gap: 24px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
     }
 
     &.third {
       margin-bottom: 80px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -49,17 +78,31 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 0;
+    }
   }
 
   .card {
     display: flex;
     gap: 24px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
     .text {
       display: flex;
       flex-direction: column;
       width: calc(100% - 96px);
       gap: 8px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
 
       h3 {
         text-transform: uppercase;
@@ -93,5 +136,11 @@
         background-clip: text;
       }
     }
+  }
+}
+
+.mobile-centered {
+  @media (max-width: 768px) {
+    text-align: center;
   }
 }
