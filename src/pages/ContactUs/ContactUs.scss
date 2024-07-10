@@ -8,6 +8,12 @@
     background-position-x: center;
     background-position-y: center;
 
+    @media (max-width: 768px) {
+      height: 880px;
+      background-size: contain;
+      padding: 24px 16px;
+    }
+
     .first {
       display: flex;
       justify-content: center;
@@ -16,12 +22,20 @@
       padding-top: 10px;
       gap: 24px;
 
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+
       h1 {
         text-transform: uppercase;
       }
 
       p {
         width: 582px;
+
+        @media (max-width: 768px) {
+          width: unset;
+        }
       }
 
       .p-row {
@@ -41,6 +55,12 @@
     margin-top: -300px;
     margin-bottom: 60px;
 
+    @media (max-width: 768px) {
+      margin-top: -320px;
+      margin-bottom: 24px;
+      padding: 0 16px;
+    }
+
     .form-wrapper {
       background: $purple;
       padding: 60px;
@@ -51,8 +71,17 @@
       border-radius: 24px;
       box-sizing: border-box;
 
+      @media (max-width: 768px) {
+        padding: 24px 16px;
+      }
+
       h2 {
         text-transform: uppercase;
+
+        @media (max-width: 768px) {
+          font-size: 36px;
+          line-height: 56px;
+        }
       }
 
       .form {
