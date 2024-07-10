@@ -8,8 +8,8 @@ const Footer = () => {
   const navigate = useNavigate();
 
   const handleLinkClick = (path) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     navigate(path);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
     <footer className="footer">

@@ -1,6 +1,6 @@
 import "./Home.scss";
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as Icon1 } from "assets/icons/home-expertice-1.svg";
 import { ReactComponent as Icon2 } from "assets/icons/home-expertice-2.svg";
 import { ReactComponent as Icon3 } from "assets/icons/home-expertice-3.svg";
@@ -8,6 +8,12 @@ import { ReactComponent as Icon4 } from "assets/icons/home-expertice-4.svg";
 import Button from "components/Button";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate(path);
+  };
   return (
     <section className="home">
       <article className="main">
@@ -20,9 +26,9 @@ const Home = () => {
             Harnessing Sustainable Power for Unmatched Performance and
             Innovation
           </p>
-          <Link to="/services">
+          <div onClick={() => handleLinkClick("/services")}>
             <Button>Discover Our Services</Button>
-          </Link>
+          </div>
         </div>
       </article>
       <article>
@@ -109,9 +115,9 @@ const Home = () => {
             ensure that our operations are environmentally responsible and
             contribute positively to global sustainability efforts.
           </p>
-          <Link to="/contact-us">
+          <div onClick={() => handleLinkClick("/contact-us")}>
             <Button>Contact us</Button>
-          </Link>
+          </div>
         </div>
       </article>
     </section>
