@@ -1,6 +1,10 @@
 @import "styles/colors.scss";
 
 .services {
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+
   h1 {
     text-align: center;
     text-transform: uppercase;
@@ -22,6 +26,10 @@
     align-items: center;
     gap: 48px;
     padding: 48px 0;
+
+    @media (max-width: 768px) {
+      gap: 24px;
+    }
   }
 
   &.animate {
@@ -41,6 +49,10 @@
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+    @media (max-width: 768px) {
+      padding: 24px 16px;
+    }
 
     &:nth-child(1) {
       transition-delay: 0.3s;
