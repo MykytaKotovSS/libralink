@@ -67,6 +67,35 @@ const Header = () => {
           )}
         </div>
       </div>
+      {isMenuOpen && (
+        <div className="mobile-menu">
+          <nav className="mobile-nav">
+            <Link
+              to="/about-us"
+              className={location.pathname === "/about-us" ? "active" : ""}
+              onClick={toggleMenu}
+            >
+              About Us
+            </Link>
+            <Link
+              to="/services"
+              className={location.pathname === "/services" ? "active" : ""}
+              onClick={toggleMenu}
+            >
+              Services
+            </Link>
+            <Link
+              to="/sustainability"
+              className={
+                location.pathname === "/sustainability" ? "active" : ""
+              }
+              onClick={toggleMenu}
+            >
+              Sustainability
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
