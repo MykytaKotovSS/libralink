@@ -9,6 +9,14 @@
     background-position-y: top;
     margin-top: -104px;
 
+    @media (max-width: 768px) {
+      height: 730px;
+      background-position-y: bottom;
+      background-size: contain;
+      margin-top: 0;
+      padding: 0 16px;
+    }
+
     .first {
       display: flex;
       justify-content: center;
@@ -16,6 +24,10 @@
       padding-top: 165px;
       flex-direction: column;
       gap: 24px;
+
+      @media (max-width: 768px) {
+        padding: 0;
+      }
 
       h1 {
         text-transform: uppercase;
@@ -27,30 +39,69 @@
     }
   }
 
-  .second {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 24px;
-
-    h1 {
-      text-transform: uppercase;
+  .mission {
+    @media (max-width: 768px) {
+      margin-top: -100px;
+      padding: 0 16px;
     }
 
-    p {
-      text-align: center;
+    .second {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 24px;
+
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+
+      h1 {
+        text-transform: uppercase;
+
+        @media (max-width: 768px) {
+          text-align: center;
+        }
+      }
+
+      p {
+        text-align: center;
+      }
     }
   }
 
   .bottom {
     margin: 80px 0;
+    @media (max-width: 768px) {
+      margin: 24px 0;
+      padding: 0 16px;
+    }
 
     .third {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
       position: relative;
       padding: 60px 24px;
       background-color: black;
       border-radius: 24px;
+
+      h1 {
+        @media (max-width: 768px) {
+          text-transform: uppercase;
+        }
+      }
+
+      p {
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        padding: 24px 16px;
+        width: auto;
+        text-align: center;
+      }
     }
 
     .third::before {
@@ -65,5 +116,11 @@
       z-index: -1;
       border-radius: 24px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none;
   }
 }
