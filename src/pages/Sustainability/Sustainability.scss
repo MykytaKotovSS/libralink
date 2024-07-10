@@ -2,12 +2,31 @@
 
 .sustainability {
   display: flex;
+
+  @media (max-width: 768px) {
+    width: auto;
+    padding: 0;
+    padding-right: 16px;
+  }
+
   .images {
     display: flex;
     flex-direction: column;
     width: 450px;
     margin-left: -160px;
+
+    @media (max-width: 768px) {
+      width: 137px;
+      margin-left: 0;
+      background-image: url("/assets/images/sustainability-img.svg");
+      background-size: contain;
+      background-repeat: repeat-y;
+    }
+
     img {
+      @media (max-width: 768px) {
+        display: none;
+      }
       &.second {
         margin-top: -173px;
       }
@@ -21,11 +40,21 @@
     align-items: end;
     padding: 48px 0;
 
+    @media (max-width: 768px) {
+      padding: 24px 0;
+      width: calc(100% - 137px);
+      gap: 48px;
+    }
+
     .card {
       display: flex;
       flex-direction: column;
       gap: 24px;
       width: 647px;
+
+      @media (max-width: 768px) {
+        width: auto;
+      }
 
       h2 {
         text-transform: uppercase;
