@@ -1,5 +1,5 @@
 import "./ContactUs.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 import Button from "components/Button";
 import Input from "components/Input/Input";
@@ -11,6 +11,10 @@ import { ReactComponent as MapPinLine } from "assets/icons/MapPinLine.svg";
 import { ReactComponent as DeviceMobile } from "assets/icons/DeviceMobile.svg";
 
 const ContactUs = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const [submitted, setSubmitted] = useState(false);
 
   const {

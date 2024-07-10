@@ -1,8 +1,12 @@
 import "./Sustainability.scss";
-import React from "react";
+import React, { useEffect } from "react";
 import image from "assets/images/sustainability-img.svg";
 
 const Sustainability = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <section className="sustainability container">
       <div className="images">

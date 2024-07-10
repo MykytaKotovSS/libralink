@@ -10,6 +10,10 @@ const Services = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
     const section = sectionRef.current;
     if (section) {
       setAnimate(true);

@@ -1,7 +1,10 @@
 import "./About.scss";
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <section className="about">
       <article className="about-us">
@@ -40,10 +43,10 @@ const About = () => {
           <h1>Meet the Team</h1>
           <p>
             Our team of experts is passionate about leveraging technology to
-            create a better world. <br /> With extensive
-            experience in datacenter management, high performance computing, and
-            renewable <br class="hidden-mobile" /> energy, we are equipped to
-            lead the industry towards a sustainable future.
+            create a better world. <br /> With extensive experience in
+            datacenter management, high performance computing, and renewable{" "}
+            <br class="hidden-mobile" /> energy, we are equipped to lead the
+            industry towards a sustainable future.
             <br />
             <br /> Our diverse team brings together professionals from various
             fields, all united by a shared vision of innovation and

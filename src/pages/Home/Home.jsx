@@ -1,5 +1,5 @@
 import "./Home.scss";
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as Icon1 } from "assets/icons/home-expertice-1.svg";
 import { ReactComponent as Icon2 } from "assets/icons/home-expertice-2.svg";
@@ -8,6 +8,10 @@ import { ReactComponent as Icon4 } from "assets/icons/home-expertice-4.svg";
 import Button from "components/Button";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const navigate = useNavigate();
 
   const handleLinkClick = (path) => {
