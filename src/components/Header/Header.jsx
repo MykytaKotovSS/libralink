@@ -1,13 +1,20 @@
 import "./Header.scss";
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ReactComponent as Logo } from "assets/icons/Command.svg";
 import { ReactComponent as Chats } from "assets/icons/Chats.svg";
 import { ReactComponent as ChatsMobile } from "assets/icons/ChatsMobile.svg";
-import { ReactComponent as List } from "assets/icons/List.svg";
+import { ReactComponent as Open } from "assets/icons/List.svg";
+import { ReactComponent as Close } from "assets/icons/X.svg";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="header">
       <div className="menu container">
@@ -53,7 +60,11 @@ const Header = () => {
           <Link to="/contact-us">
             <ChatsMobile />
           </Link>
-          <List />
+          {isMenuOpen ? (
+            <Close onClick={toggleMenu} />
+          ) : (
+            <Open onClick={toggleMenu} />
+          )}
         </div>
       </div>
     </header>
